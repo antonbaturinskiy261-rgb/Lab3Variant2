@@ -61,7 +61,10 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(onClick = {
-            // Логика будет добавлена в следующем коммите
+            result = when {
+                input.equals("d", ignoreCase = true) -> "Это Дуб"
+                else -> "Это не Дуб"
+            }
         }) {
             Text("OK")
         }
